@@ -1,0 +1,3 @@
+[submodule "AnecFrontLibrary"]
+	path = AnecFrontLibrary
+	url = git@github.com:joazco/AnecFrontLibrary.git

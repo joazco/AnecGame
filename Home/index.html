@@ -1,0 +1,292 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#34495e" />
+
+    <title>AnecGame venez raconter vos anecdotes les plus loufoques</title>
+    
+    <meta name="description" content="Profitez du jeu virtuel participatif Anec Game pour tous vos
+    team-bulding ou avec vos amis en présentiel ou en distanciel. Il est gratuit, rapide, modelable et
+    utilisable en intérieur comme en extérieur. Adapté au télétravail.">
+    <meta name="keywords" content="jeu, jeu participatif, jeu anecdotes, anecgame, distanciel, jeu experience">
+    <meta name="robots" content="all">
+      <meta name="theme-color" content="#000000"/>
+      <meta name="author" content="Joazco" />
+<meta name="copyright" content="© Joazco 2021 Inc." />
+<meta property="og:title" content="AnecGame"/>
+    <meta property="og:url" content="http://www.anecgame.com" />
+    <meta property="og:image" content="https://d2pep12re1brfc.cloudfront.net/assets/FavIcon.ico" />
+    <meta property="og:type" content="website">
+    <meta property="al:ios:app_name" content="AnecGame" />
+    <meta property="al:android:app_name" content="AnecGame" />
+    <meta property="al:web:url"
+    content="http://www.anecgame.com" />
+
+
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      href="https://d2pep12re1brfc.cloudfront.net/assets/FavIcon.ico"
+    />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://d2pep12re1brfc.cloudfront.net/assets/FavIcon.png"
+    />
+   
+    <link
+      rel="shortcut icon"
+      href="https://d2pep12re1brfc.cloudfront.net/assets/FavIcon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://d2pep12re1brfc.cloudfront.net/assets/FavIcon.png"
+    />
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="64x64"
+    href="https://d2pep12re1brfc.cloudfront.net/assets/FavIcon.png"
+  />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://d2pep12re1brfc.cloudfront.net/assets/FavIcon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://d2pep12re1brfc.cloudfront.net/assets/FavIcon.png"
+    />
+    <!-- -->
+
+    <link href="https://d2pep12re1brfc.cloudfront.net/assets/anec-home.css" rel="stylesheet" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Dancing+Script"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- AWS Aneclibrary CDN -->
+    <link
+      href="https://d2pep12re1brfc.cloudfront.net/dist/index.css"
+      rel="stylesheet"
+    />
+    <!-- AWS Aneclibrary S3 -->
+    <!-- <link
+      href="https://d2pep12re1brfc.cloudfront.net/dist/index.css"
+      rel="stylesheet"
+    /> -->
+    <!-- local css -->
+    <!-- <link
+      href="./index.css"
+      rel="stylesheet"
+    /> -->
+    <!-- <link rel="manifest" href="https://d2pep12re1brfc.cloudfront.net/assets/manifest.json" /> -->
+    <link rel="manifest" href="/manifest.json" />
+    <script>
+      window.addEventListener("load", () => {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("sw.js", { scope: "./" })
+            .then(function (reg) {});
+        }
+      });
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-219973967-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-219973967-1');
+</script>
+
+  </head>
+  <body>
+    <main>
+    <div class="container">
+      <div class="row anec--title-container">
+        <h1 class="anec--title">AnecGame</h1>
+        <p class="anec--title-subtitle">Venez raconter vos anecdotes les plus loufoques</p>
+      </div>
+      <div class="row">
+        <div class="col s12 m8 offset-m2">
+          <form class="anec--form" id="form">
+            <div class="row">
+              <div class="anec--input-field col s11 m9 offset-m1">
+                <label for="game_name">Nom de la partie</label>
+                <input id="game_name" type="text" name="game_name" />
+              </div>
+              <div class="anec--input-field col s11 m9 offset-m1 required">
+                <label for="gamer_pseudo">Votre pseudo</label>
+                <input id="gamer_pseudo" type="text" required name="pseudo" />
+              </div>
+              <div class="anec--input-field col s12 m9 offset-m1">
+                <p>La ou les thématique(s) des anecdotes:</p>
+                <div id="anec--themes-container">
+                  
+                </div>
+                <br />
+                <label class="anec--checkbox-field with-input">
+                  <input type="checkbox" class="filled-in" id="anec--append-theme-checkbox" disabled />
+                  <span>
+                    <input type="text" placeholder="Ajouter une thématiques" id="anec--append-theme-text" />
+                  </span>
+                </label>
+              </div>
+              <div class="anec--submit-field col offset-m1">
+                <button type="submit" class="waves-effect waves-light btn anec--btn"><i class="material-icons right">sports_esports</i>Créer la partie</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row row-blank">
+      <article class="container">
+        <h2><img src="https://d2pep12re1brfc.cloudfront.net/assets/information.png" alt="information icône" /> Le jeu participatif Anec Game, c’est quoi ?</h2>
+        <p>Anec Game est un jeu virtuel qui, au travers du partage entre collaborateurs d’histoires
+          personnelles (anecdotes) sur un ou plusieurs sujet(s) choisi(s), permet de mieux
+          connaitre son entourage professionnel et de créer des liens relationnels avec eux.<br /><br />
+          En équipe ou seul contre tous, le jeu Anec Game est un jeu participatif, rapide, gratuit
+          et réalisable en intérieur comme en extérieur. En présentiel ou en distanciel, le jeu
+          participatif Anec Game est adapté aux animations team-bulding mais aussi aux poses
+          café, qu’elles soient virtuelles ou non.<br /><br />
+          Dû à sa simplicité d’utilisation, c’est une activité ludique avec une mise en place facile
+          car il ne demande qu’une connexion internet pour être utilisé.<br /><br />
+          En équipe ou seul contre tous, ce jeu ludique apporte assez de libertés pour que
+          vous puissiez le modeler selon vos envies (choix de thèmes, durée, …).<br /><br />
+          Comptez de 3 à 5 minutes de jeu par participant. </p>
+        
+        <h3><img src="https://d2pep12re1brfc.cloudfront.net/assets/rules-2.png" alt="règle icône" /> Les règles et déroulement du jeu Anec Game</h3>
+        <p>
+          Le jeu participatif Anec Game se joue au minimum avec 2 personnes, il n’y a pas de
+          participant maximum. Une partie du jeu Anec Game peut être constituée de plusieurs
+          manches ou d’une seule, c’est vous qui décidez quand vous voulez arrêter !<br /><br />
+          Il faut compter de 3 à 5 minutes de jeu pour chacun des collaborateurs.
+          <br /><br />
+          Une partie se déroule comme suit :<br />
+          Préparation en 4 étapes :<br />
+          <ul>
+            <li> - L’initiateur de la partie lance Anec Game, choisi le/les thème(s) voulu(s) et
+              invite les différents collaborateurs à participer,</li>
+              <li>- Chaque collaborateur choisit son personnage et valide</li>
+              <li>- Lorsque tout le monde a validé, l’initiateur de la partie valide une dernière fois
+                et le jeu Anec Game peut commencer !
+                But du jeu : Convaincre l’ensemble de vos collaborateurs que votre anecdote est
+                vraie.</li>
+          </ul>
+          Le déroulement du jeu :<br />
+          <ul>
+            <li>- Dès le début de partie, chacun des collaborateurs donnent un nom à son
+              anecdote choisie et renseigne à l’abris des regards si celle-ci et vraie ou
+              fausse</li>
+              <li>
+                - Chacun son tour, un collaborateur est désigné par l’application pour défendre
+                de la véracité de son anecdote
+              </li>
+              <li>
+                - Dans la foulée, quand celui-ci a fini, vient le tour aux autres collaborateurs de
+                voter selon s’ils ont été convaincu ou non avant de passer à l’anecdote d’un
+                autre collaborateur
+              </li>
+          </ul>
+          La notation des points :<br />
+          <ul>
+            <li> - Si votre anecdote est vraie, chaque collaborateur que vous avez convaincu
+              gagne 1 point. Cependant vous devez convaincre l’ensemble des participants
+              pour vous-même gagner 1 point</li>
+              <li>
+                - Si votre anecdote est fausse, chaque collaborateur qui a décelé le mensonge
+                gagne 1 point. Si vous avez convaincu la moitié des collaborateurs de la
+                véracité de votre anecdote vous gagnez 1 point, si vous avez convaincu
+                l’ensemble des joueurs vous gagnez 2 points
+              </li>
+          </ul>
+          A la fin de la manche vous pouvez soit en recommencer une, soit finir la partie.<br />
+          En équipe ou seul contre tous, ce jeu ludique apporte assez de libertés pour que
+          vous puissiez le modeler selon vos envies ! 
+        </p>
+        <h3><img src="https://d2pep12re1brfc.cloudfront.net/assets/interrogation-mark-2.png" alt="interrogation icône" /> Pourquoi Anec Game?</h3>
+        <p>Son créateur, Jordan AZOULAY, dirigeant de la société <a href="https://joazco.com">Joazco</a> a développé ce jeu participatif à la suite
+          de ses expériences en entreprises où les jeux team-building étaient assez redondants,
+          difficiles à mettre en place, nécessitant généralement beaucoup de temps et d’argent.<br />
+          Pourtant, de son avis, les animations team-building sont essentiels pour briser la glace
+          entre ses collaborateurs, maintenir la cohésion d’équipe et renforcer les liens déjà
+          présents.<br /> Il décide alors de créer le jeu Anec game avec pour but une activité ludique
+          modelable par et pour ses utilisateurs, rapide, gratuite et utilisable partout.<br /> Amusezvous bien ! </p>
+      </article>
+    </div>
+    <div class="row">
+      <article class="container">
+        <h2 id="legal-notifce"><img src="https://d2pep12re1brfc.cloudfront.net/assets/official-documents.png" alt="mention légale icône" /> Mention légale et crédits</h2>
+        <div>
+        <h3 id="credits"><img src="https://d2pep12re1brfc.cloudfront.net/assets/money.png" alt="pièce icône" /> Crédits</h3>
+          <div class="row">
+            <h4 id="credit-images"><img src="https://d2pep12re1brfc.cloudfront.net/assets/image.png" alt="image icône" />Images</h4>
+            <div class="row">
+              <div class="col s12">Les images: "administrator", ont été conçues par  <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+              <div class="col s12">Les images: "hacker", "kitty", "cat", "trophy", "second-prize", "third-prize", "game-over", "information", "interrogation-mark-2", "money", "official-document", "rules-2", "bavarder", "dart", "folder" ont été conçues par <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+              <div class="col s12">Les images: "man", "woman", ont été conçues par <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+              <div class="col s12">Les images: "rainbowFlag", "lgbtIcon", ont conçues créé par <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+              <div class="col s12">Les images: "dinosaur", ont été conçues par <a href="https://creativemarket.com/eucalyp" title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/fr/" title="Flaticon">www.flaticon.com</a></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 id="confidentiality"><img src="https://d2pep12re1brfc.cloudfront.net/assets/folder.png" alt="confidentialité icône" /> Engagement de confidentialité</h3>
+            <div class="row">
+              <p>
+                Les données présentes sur l’application Anec Game ne sont pas sauvegardées. <br />
+                Les renseignements rassemblés seront communiqués à aucun destinataire.<br />
+                Si après avoir contacté notre service juridique, à l'adresse jazoulay@joazco.com, vous
+                constatez que vos droits « Informatiques et Libertés » ne sont pas respectés, vous
+                pourrez adresser une réclamation à la Commission nationale de l’Informatique et des
+                Libertés ou CNIL, 3 Places de Fontenoy, 75007 Paris.<br /> Note : Les informations marquées 
+                d’astérisques sont obligatoires et doivent impérativement être fournies. Il s’agit de
+                renseignements nécessaires à la fourniture des services ou la conclusion du contrat.
+              </p>
+            </div>
+          </div>
+      </article>
+  
+    <div class="anec--loader anec--loader-hide">
+      <div>Création de votre partie</div>
+      <div class="progress">
+        <div class="indeterminate"></div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div>
+      Copyright © 2021 anecgame.com <br />
+      <a href="https://joazco.com" target="_blank"
+        >By Joazco</a
+      >
+    </div>
+    <div>Anecgame.com n'utilise aucun cookie</div>
+  </footer>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://d2pep12re1brfc.cloudfront.net/assets/anec-home.js"></script>
+  </body>
+</html>

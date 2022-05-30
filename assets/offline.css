@@ -1,0 +1,29 @@
+body {
+  background-color: var(--primary);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+main p,
+main a {
+  font-size: 1.3rem;
+  color: white;
+  text-align: center;
+}
+footer {
+  display: flex !important;
+  color: var(--primary);
+  background-color: white;
+  justify-content: space-around;
+  padding: 10px 30px 20px 30px;
+}

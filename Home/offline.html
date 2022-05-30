@@ -1,0 +1,80 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#34495e" />
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      href="https://anecbucket.s3.eu-west-3.amazonaws.com/assets/FavIcon.ico"
+    />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://anecbucket.s3.eu-west-3.amazonaws.com/assets/FavIcon.png"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://anecbucket.s3.eu-west-3.amazonaws.com/assets/FavIcon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://anecbucket.s3.eu-west-3.amazonaws.com/assets/FavIcon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="https://anecbucket.s3.eu-west-3.amazonaws.com/assets/FavIcon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://anecbucket.s3.eu-west-3.amazonaws.com/assets/FavIcon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://anecbucket.s3.eu-west-3.amazonaws.com/assets/FavIcon.png"
+    />
+    <link
+      href="https://anecbucket.s3.eu-west-3.amazonaws.com/dist/index.css"
+      rel="stylesheet"
+    />
+    <!-- -->
+    <link
+      href="https://anecbucket.s3.eu-west-3.amazonaws.com/assets/offline.css"
+      rel="stylesheet"
+    />
+    <title>AnecGame - Hors connexion</title>
+
+    <script>
+      window.addEventListener("load", () => {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("sw.js", { scope: "./" })
+            .then(function (reg) {});
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <main>
+      <img
+        src="https://anecbucket.s3.eu-west-3.amazonaws.com/assets/Icon.svg"
+        alt="Icon AnecGame"
+      />
+      <p>Vous êtes hors connexion</p>
+      <a href="/">Cliquez ici lorsque vous avez récupéré la connexion</a>
+    </main>
+    <footer>
+      <div>Copyright © 2021 anecgame.com <br /></div>
+      <div>Anecgame.com n'utilise aucun cookie</div>
+    </footer>
+  </body>
+</html>

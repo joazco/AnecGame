@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:11-stretch
+    environment:
+      POSTGRES_PASSWORD: aws
+      POSTGRES_USER: aws
+      POSTGRES_DB: aws
+    ports:
+      - 5432:5432

@@ -1,0 +1,27 @@
+{
+  "name": "anec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "front.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "cd POC/Front && npm install",
+    "build": "node ./front.js",
+    "listenHome": "serve Home -p 5500",
+    "buildReact": "cd POC/Front && npm run build",
+    "cpHomeAssets": "cp Home/dist/* assets/",
+    "syncAssets": "npm run cpHomeAssets; aws s3 sync assets s3://anecbucket/assets --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers;",
+    "cpAnecLibrary": "npm run syncAssets; cd AnecFrontLibrary; npm run build-aws",
+    "sendS3": "npm run cpHomeAssets; npm run syncAssets;npm run cpAnecLibrary"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joazco/AnecGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joazco/AnecGame/issues"
+  },
+  "homepage": "https://github.com/joazco/AnecGame#readme"
+}

@@ -1,0 +1,24 @@
+{
+  "folders": [
+    {
+      "path": "./AnecFrontLibrary"
+    },
+    {
+      "name": "Front",
+      "path": "POC/Front"
+    },
+    {
+      "path": "POC/Back"
+    },
+    {
+      "path": "Home"
+    },
+    {
+      "name": "Anec",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Home"
+  }
+}
